@@ -378,20 +378,25 @@ async def remove_all_channels(client, message: Message):
 # 6. /stop
 @bot.on_message(filters.command("stop"))
 async def stop_handler(client, message: Message):
-    if message.chat.type == "private":
-        user_id = str(message.from_user.id)
-        subscription_data = read_subscription_data()
-        if not any(user[0] == user_id for user in subscription_data):
-            await message.reply_text("😔 You are not a premium user. Please subscribe to get access! 🔒")
-            return
-    else:
-        channels = read_channels_data()
-        if str(message.chat.id) not in channels:
-            await message.reply_text("🚫 You are not a premium user. Subscribe to unlock all features! ✨")
-            return
+    user_id = str(message.from_user.id)
+    subscription_data = read_subscription_data()  # Read the subscription data
 
-    await message.reply_text("♦️ 𝐒𝐭𝐨𝐩𝐩𝐞𝐝 Baby💞 ♦️" , True)
+    # Check if user is a premium user by looking in the subscription data or checking if they are the admin
+    if user_id == str(YOUR_ADMIN_ID):  # Admin users always have access
+        is_premium = True
+    elif any(user[0] == user_id for user in subscription_data):  # Check if user ID is in the subscription data
+        is_premium = True
+    else:
+        is_premium = False
+
+    if not is_premium:
+        await message.reply_text("🚫 You are not a premium user. Subscribe to unlock all features! ✨")
+        return
+
+    # If premium, stop the task and restart the bot
+    await message.reply_text("♦️ 𝐒𝐭𝐨𝐩𝐩𝐞𝐝 Baby💞 ♦️", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
+
 
 # 7. /harry
 @bot.on_message(filters.command("harry"))
