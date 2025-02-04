@@ -68,11 +68,11 @@ import random
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("FOLLOW " ,url="https://www.instagram.com/nikhil.saini.khe"),
-            InlineKeyboardButton("✜ NIKHIL SAINI ✜" ,url="https://t.me/Nikhil_saini_khe"),
+            InlineKeyboardButton("FOLLOW " ,url="https://t.me/HarryPotter100"),
+            InlineKeyboardButton("✜ MAGIC ✜" ,url="https://t.me/HarryPotter100"),
         ],
         [
-            InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 Group 🥱✜" ,url=f"https://t.me/+taZCy5OkoMUwNzI9"),
+            InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 Group 🥱✜" ,url=f"https://t.me/richtradetalk"),
         ],
     ]
 )
@@ -81,11 +81,11 @@ keyboard = InlineKeyboardMarkup(
 Busy = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("FOLLOW " ,url="https://www.instagram.com/nikhil.saini.khe"),
-            InlineKeyboardButton("✜ NIKHIL SAINI ✜" ,url="https://t.me/Nikhil_saini_khe"),
+            InlineKeyboardButton("FOLLOW " ,url="https://t.me/HarryPotter100"),
+            InlineKeyboardButton("✜ MAGIC ✜" ,url="https://t.me/HarryPotter100"),
         ],
         [
-            InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 Group 🥱✜" ,url=f"https://t.me/+taZCy5OkoMUwNzI9"),
+            InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 Group 🥱✜" ,url=f"https://t.me/richtradetalk"),
         ],
     ]
 )
@@ -111,11 +111,11 @@ async def start_command(bot: Client, message: Message):
     # Caption for the image
     caption = (
         "**𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!**\n\n"
-        "➠ **𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 By NIKHIL SAINI**\n"
+        "➠ **𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 By Harry Potter**\n"
         "➠ **Can Extract Videos & PDFs From Your Text File and Upload to Telegram!**\n"
         "➠ **For Guide Use Command /guide 📖**\n\n"
-        "➠ **Use /saini Command to Download From TXT File** 📄\n\n"
-        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @nikhil_saini_khe"
+        "➠ **Use /Harry Command to Download From TXT File** 📄\n\n"
+        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @VictoryAnthem"
     )
 
     # Send the image with caption and buttons
